@@ -78,8 +78,8 @@ python manage.py runserver
 
 
 
----
 
+```
 ## 🧠 What I Learned
 
 Through this project, I strengthened my skills in:
@@ -89,4 +89,4 @@ Through this project, I strengthened my skills in:
 - **Creating reusable templates and models**  
 - **Deploying and managing backend apps**
 
----
+
