@@ -21,7 +21,7 @@ def home(request):
             messages.success(request, "There Was An Error Logging In, Please Try Again...")
             return redirect('home')
     else:   
-     return render(request, 'home.html', {})
+     return render(request, 'home.html', {'records':records})
 
 def logout_user(request):
 	logout(request)
@@ -49,7 +49,14 @@ def register_user(request):
 
 
 def customer_record(request, pk):
-    pass
+	if request.user.is_authenticated:
+		# Look Up Records
+		customer_record = Record.objects.get(id=pk)
+		return render(request, 'record.html', {'customer_record':customer_record})
+	else:
+		messages.success(request, "You Must Be Logged In To View That Page...")
+		return redirect('home')
+
 
 def delete_record(request, pk):
     pass
