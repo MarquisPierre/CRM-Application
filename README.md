@@ -75,3 +75,18 @@ python manage.py migrate
 
 # 7️⃣ Run the development server
 python manage.py runserver
+
+
+
+---
+
+## 🧠 What I Learned
+
+Through this project, I strengthened my skills in:
+- **Building full-stack web applications** with Django  
+- **Integrating MySQL databases** with Django ORM  
+- **Implementing authentication systems**  
+- **Creating reusable templates and models**  
+- **Deploying and managing backend apps**
+
+---
