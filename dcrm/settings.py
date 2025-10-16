@@ -11,6 +11,15 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access environment variables
+PASSWORD_KEY = os.getenv('PASSWORD_KEY')
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -79,7 +88,7 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'crm',
         'USER': 'root',
-        'PASSWORD': 'Tamashi20!',
+        'PASSWORD': PASSWORD_KEY,
         'HOST': 'localhost',
         'PORT': '3306',
     }
